@@ -43,7 +43,7 @@ public class Game {
             }
             String result = switch (Integer.compare(player.getScoreValue(), dealer.getScoreValue())) {
                 case -1 -> "Loser";
-                case 0 -> "Tie\t";
+                case 0 -> "Tie";
                 case 1 -> "Winner";
                 default -> throw new IllegalArgumentException(("Did not expect value from compare"));
             };
