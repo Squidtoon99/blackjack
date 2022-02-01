@@ -35,7 +35,7 @@ public class Game {
             }
         }
 
-        System.out.printf("%-6s %s\n", "", dealer);
+        System.out.printf("%-6s %s%n", "", dealer);
 
         for (Player player : players) {
             if (player.equals(dealer)) {
@@ -58,7 +58,7 @@ public class Game {
                     throw new IllegalArgumentException(("Did not expect value from compare"));
             }
 
-            System.out.printf("%-6s %s\n", result, player);
+            System.out.printf("%-6s %s%n", result, player);
         }
     }
 
