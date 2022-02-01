@@ -47,10 +47,17 @@ public class Player {
         return handValue;
     }
 
+    public boolean hasBlackJack() {
+        return hand.size() == 2 && handValue == 21;
+    }
+
     public int getScoreValue() {
         if (handValue > 21) {
             return -1;
         } else {
+            if (hasBlackJack()) {
+                return handValue + 1;
+            }
             return handValue;
         }
     }
