@@ -41,12 +41,22 @@ public class Game {
             if (player.equals(dealer)) {
                 continue;
             }
-            String result = switch (Integer.compare(player.getScoreValue(), dealer.getScoreValue())) {
-                case -1 -> "Loser";
-                case 0 -> "Tie";
-                case 1 -> "Winner";
-                default -> throw new IllegalArgumentException(("Did not expect value from compare"));
-            };
+
+            String result;
+
+            switch (Integer.compare(player.getScoreValue(), dealer.getScoreValue())) {
+                case -1:
+                    result = "Loser";
+                    break;
+                case 0:
+                    result = "Tie";
+                    break;
+                case 1:
+                    result = "Winner";
+                    break;
+                default:
+                    throw new IllegalArgumentException(("Did not expect value from compare"));
+            }
 
             System.out.printf("%-6s %s\n", result, player);
         }
