@@ -1,4 +1,4 @@
-# blackjack/blackjack
+# Squidtoon99/blackjack
 
 ## Getting Started
 
