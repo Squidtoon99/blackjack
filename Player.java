@@ -32,6 +32,8 @@ public class Player {
             for (Card card : hand) {
                 if (card.getValue() == 11) {
                     card.setValue(1);
+                    hand.remove(card);
+                    hand.add(0, card);
                     handValue -= 10;
                     break;
                 }
